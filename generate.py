@@ -10,7 +10,7 @@ d = requests.get("https://ruleset.skk.moe/List/non_ip/domestic.conf", stream=Tru
 rule_file = os.path.dirname(os.path.realpath(__file__))+"/rules.txt"
 if os.path.isfile(rule_file):
     os.remove(rule_file)
-shutil.copyfile("/home/wwwroot/network.tw/rules-model.txt", rule_file)
+shutil.copyfile("rule-model.txt", rule_file)
 with open(rule_file, "r") as f:
     # Domestic
     rules = f.read()
